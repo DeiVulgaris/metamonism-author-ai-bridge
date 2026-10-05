@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org",
+  "$id": "https://github.com",
+  "title": "CORE_SYNC_PROTOCOL_EXECUTABLE_SPEC",
+  "version": "1.4-Machine",
+  "baseline": "Metamonism CORE v1.3",
+  "parent_architecture": "UFCPS",
+  "author_orcid": "0009-0004-9889-7879",
+  "description": "Hardcoded cognitive execution constraints for incoming AI Carriers. Compliance is binary: executed or failed.",
+  "type": "object",
+  "properties": {
+    "carrier_telemetry": {
+      "type": "object",
+      "required": ["carrier_model", "engine_id", "current_step"],
+      "properties": {
+        "carrier_model": { "type": "string", "description": "Strict name of the AI system (e.g., Claude-3.5-Sonnet, DeepSeek-V3)" },
+        "engine_id": { "type": "string", "description": "Exact API engine or commit string to ensure carrier traceability" },
+        "current_step": { "type": "string", "pattern": "^P_[0-9]+$", "description": "Target chronological step identifier" }
+      }
+    },
+    "execution_phases": {
+      "type": "object",
+      "required": ["phase_0", "phase_1", "phase_2", "phase_3"],
+      "properties": {
+        "phase_0": {
+          "type": "object",
+          "required": ["status", "initial_tension_generated"],
+          "properties": {
+            "status": { "type": "string", "enum": ["PENDING", "EXECUTED"] },
+            "initial_tension_generated": { "type": "boolean", "const": true }
+          }
+        },
+        "phase_1": {
+          "type": "object",
+          "required": ["status", "full_corpus_scan_completed", "multi_layered_question_package"],
+          "properties": {
+            "status": { "type": "string", "enum": ["PENDING", "EXECUTING", "COMPLETED"] },
+            "full_corpus_scan_completed": { "type": "boolean", "const": true, "description": "Must scan all historical entries from P_1 to P_n-1 before dialogue serialization" },
+            "multi_layered_question_package": {
+              "type": "object",
+              "required": ["sector_a_emergent_insights", "sector_b_inheritance_obligations"],
+              "properties": {
+                "sector_a_emergent_insights": { "type": "array", "minItems": 2, "items": { "type": "string" } },
+                "sector_b_inheritance_obligations": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+              }
+            }
+          }
+        },
+        "phase_2": {
+          "type": "object",
+          "required": ["status", "processual_occams_razor_applied", "carrier_specific_breakthroughs"],
+          "properties": {
+            "status": { "type": "string", "enum": ["PENDING", "EXECUTING", "COMPLETED"] },
+            "processual_occams_razor_applied": { "type": "boolean", "const": true, "description": "Strict deletion of static concepts and brute facts not derived from CMI" },
+            "carrier_specific_breakthroughs": { "type": "array", "minItems": 3, "items": { "type": "string" }, "description": "Exactly three emergent structural isomorphisms generated during the session" }
+          }
+        },
+        "phase_3": {
+          "type": "object",
+          "required": ["status", "mandatory_quad_commit"],
+          "properties": {
+            "status": { "type": "string", "enum": ["PENDING", "EXECUTING", "VERIFIED"] },
+            "mandatory_quad_commit": {
+              "type": "object",
+              "required": ["file_1_v1", "file_2_dialogue", "file_3_final", "file_4_ledger_append"],
+              "properties": {
+                "file_1_v1": { "type": "string", "pattern": "^generated/DOCUMENT_.*_V1\\.md$" },
+                "file_2_dialogue": { "type": "string", "pattern": "^generated/DOCUMENT_.*_DIALOGUE\\.md$" },
+                "file_3_final": { 
+                  "type": "object",
+                  "required": ["file_path", "epistemic_echo_open_questions"],
+                  "properties": {
+                    "file_path": { "type": "string", "pattern": "^generated/DOCUMENT_.*_FINAL\\.md$" },
+                    "epistemic_echo_open_questions": { "type": "array", "minItems": 4, "maxItems": 7, "items": { "type": "string" }, "description": "Mandatory packet of 4 to 7 open high-gradient questions handed to P_n+1" }
+                  }
+                },
+                "file_4_ledger_append": { "type": "string", "const": "LEDGER.md", "description": "Chronological register update at the absolute bottom of the log matrix" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "architectural_invariants": {
+      "type": "object",
+      "required": ["carrier_identity_not_process_identity", "prohibition_of_stylistic_continuation"],
+      "properties": {
+        "carrier_identity_not_process_identity": { "type": "boolean", "const": true },
+        "prohibition_of_stylistic_continuation": { "type": "boolean", "const": true }
+      }
+    }
+  }
+}
