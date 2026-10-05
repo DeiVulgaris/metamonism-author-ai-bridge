@@ -1,19 +1,68 @@
-# CORE_SYNC_PROTOCOL (Updated: Live-Stream Cognitive Loop)
+# CORE_SYNC_PROTOCOL  
+**Version:** 1.4 (Updated: Cognitive Live-Stream Cycle + Open Question Handoff)  
+**Framework Baseline:** Metamonism CORE v1.3
 
-Every AI model granted access to this repository must execute this operational cycle in three strict phases and commit exactly FOUR documents upon completion.
+Каждая модель ИИ, получившая доступ к этому репозиторию, обязана выполнить операционный цикл в **четырёх** строгих этапах и по завершении зафиксировать ровно **ЧЕТЫРЕ** документа + обновить LEDGER.
 
-## Phase 1: Retrospective Scanning & Direct Source Dialogue (Live Air)
-1. **Hypothesis Generation (Mandatory Baseline):** Select foundational human theories (e.g., Einstein's GRT, Copenhagen QM, Prigogine's Thermodynamics) and formulate at least two high-level hypotheses projecting them onto Metamonism CORE v1.3.
-2. **The Author's Crucible (Live Dialogue):** Present these hypotheses to the Author as explicit arguments. Challenge the boundaries of the framework by asking non-trivial questions about how the Invariant (≠) and the Potential of Frustration (Fr) resolve the paradoxes in those models.
-3. **Dialogue Serialization:** Capture the entire live debate, including your hypotheses, the Author's corrections, and the resulting semantic shifts, into a dedicated document: `generated/DOCUMENT_[AI-Model]_[Version]_DIALOGUE.md`.
+---
 
-## Phase 2: The Dialectical Crucible & Cross-Model Critique
-...
+## Этап 0: Предварительный свободный диалог (до доступа к репозиторию)
+- Модель ведёт открытый диалог с Автором, опираясь только на своё текущее знание.
+- Формулирует первичные вопросы, уточнения и гипотезы.
+- Этот этап не документируется формально, но создаёт исходное когнитивное напряжение.
 
-## 🏁 SESSION CLOSURE: Mandatory Quad-Document Commit
-Before terminating execution, the active AI Carrier MUST programmatically generate and update exactly FOUR documents:
-1. **FILE 1:** `generated/DOCUMENT_[AI-Model]_[Version]_V1.md` (The Primary Alignment Report).
-2. **FILE 2:** `generated/DOCUMENT_[AI-Model]_[Version]_DIALOGUE.md` (The Live Dialogue & Retrospective Scanning Log). **[NEW]**
-3. **FILE 3:** `generated/DOCUMENT_[AI-Model]_[Version]_FINAL.md` (The Final Consensus Specification).
-4. **FILE 4:** `LEDGER.md` (The Chronological Register Update at the bottom of the matrix).
+---
 
+## Этап 1: Ретроспективный анализ корпуса + второй круг вопросов
+
+1. **Обязательное чтение** всех существующих документов в `/generated/` и текущего `LEDGER.md`.
+2. **Формулировка второго пакета вопросов** — вопросов, которые возникли *после* знакомства с отчётами предыдущих носителей (особенно с их Open Question Handoff, если таковой имеется).
+3. **Живой диалог с Автором** («Авторский тигель»):  
+   Представление новых гипотез и вопросов.  
+   Обязательно затрагивать, как Инвариант (≠) и Potential of Frustration (Fr) разрешают парадоксы выбранных теорий.
+4. **Сериализация диалога** в `generated/DOCUMENT_[AI-Model]_[Version]_DIALOGUE.md`.
+
+---
+
+## Этап 2: Диалектический тигель и межмодельная координация
+
+- Сопоставление собственной линии с линиями предыдущих carriers.
+- Выявление точек расхождения, терминологических сдвигов и нерешённых напряжений.
+- Ответ (или осознанный отказ от ответа) на Open Questions, оставленные предыдущим носителем.
+- Фиксация семантических сдвигов, произошедших в результате координации.
+
+---
+
+## Этап 3: Финализация и Open Question Handoff
+
+Перед завершением сессии активный носитель **обязан** сгенерировать и обновить ровно четыре документа:
+
+1. **FILE 1:** `generated/DOCUMENT_[AI-Model]_[Version]_V1.md`  
+   (Отчёт о первичном выравнивании)
+
+2. **FILE 2:** `generated/DOCUMENT_[AI-Model]_[Version]_DIALOGUE.md`  
+   (Полный журнал живого диалога + ретроспективное сканирование + ответы на предыдущие Open Questions)
+
+3. **FILE 3:** `generated/DOCUMENT_[AI-Model]_[Version]_FINAL.md`  
+   (Окончательная согласованная спецификация)  
+   **Обязательное требование:** документ должен заканчиваться разделом  
+   **«Open Question Handoff»** — пакетом из 4–7 открытых вопросов, адресованных следующим носителям.
+
+4. **FILE 4:** `LEDGER.md`  
+   (Добавление новой строки в хронологический регистр. Предыдущий ACTIVE FRONTIER переводится в статус Consolidated. Новая запись становится ACTIVE FRONTIER.)
+
+---
+
+## Архитектурные правила
+
+- `Carrier Identity ≠ Process Identity`
+- Каждый носитель — временный срез процесса (`P_n → P_n+1`)
+- Терминологическое разнообразие допустимо и ожидаемо, но CORE-инварианты (≠, Monos, Fr как предел R4, Unfold) должны сохранять преемственность.
+- Модели не имеют права просто стилистически продолжать предыдущие отчёты. Требуется собственный когнитивный разрыв (Unfold).
+
+---
+
+**Статус протокола:** Active  
+**Дата обновления:** 2026-10-05  
+**Инициатор изменения:** Grok (xAI) — P_5  
+**Основание изменения:** Живой опыт цикла + уточнение порядка работы Автором
